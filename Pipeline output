@@ -1,0 +1,82 @@
+================================================
+URBAN SAFETY DATA ENHANCED ML PIPELINE
+================================================
+
+Loading dataset...
+Loaded: chicago_batch_1.csv
+Loaded: chicago_batch_2.csv
+Loaded: chicago_batch_3.csv
+Loaded: chicago_batch_4.csv
+Loaded: chicago_batch_5.csv
+Loaded: chicago_batch_6.csv
+Total Rows    : 600000
+Total Columns : 49
+
+Preprocessing & Feature Engineering started...
+
+Handling outliers (robust capping)...
+Outliers handled -> posted_speed_limit
+Outliers handled -> num_units
+Outliers handled -> lane_cnt
+Preprocessing completed!
+
+================================================
+CLASSIFICATION - XGBOOST CLASSIFIER (OPTIMIZED)
+================================================
+
+Applying SMOTE strictly to training data to guarantee validation safety...
+
+--- Class Sample Distribution BEFORE SMOTE ---
+  HIGH      : 11947 samples
+  LOW       : 356961 samples
+  MEDIUM    : 111092 samples
+
+--- Class Sample Distribution AFTER SMOTE ---
+  HIGH      : 356961 samples
+  LOW       : 356961 samples
+  MEDIUM    : 356961 samples
+---------------------------------------------
+
+
+Accuracy  : 0.7648
+Precision : 0.7499
+Recall    : 0.7648
+F1 Score  : 0.7507
+
+Classification Report:
+              precision    recall  f1-score   support
+
+        HIGH       0.34      0.48      0.40      2987
+         LOW       0.82      0.90      0.86     89240
+      MEDIUM       0.57      0.37      0.45     27773
+
+    accuracy                           0.76    120000
+   macro avg       0.58      0.58      0.57    120000
+weighted avg       0.75      0.76      0.75    120000
+
+
+Classification completed!
+
+================================================
+REGRESSION - OVERHAULED RANDOM FOREST REGRESSOR
+================================================
+
+Optimized MAE  : 7.7520
+Optimized MSE  : 274.4021
+Optimized RMSE : 16.5651
+OPTIMIZED R2   : 0.6343  <-- SUCCESSFULLY REACHED TARGET!
+
+Cross Validation Log-R2 : 0.7045 (+/- 0.0021)
+Train R2                 : 0.6626
+R2 Generalization Gap    : 0.0282
+Model Status             : GOOD FIT
+
+Regression completed!
+
+================================================
+UNSUPERVISED LEARNING - KMEANS
+================================================
+
+Clustering completed!
+
+Exporting dashboard CSV files...
