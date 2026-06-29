@@ -1,3 +1,5 @@
+[Running] python -u "c:\Users\user\Desktop\Chicago_Project\pipeline.py"
+
 ================================================
 URBAN SAFETY DATA ENHANCED ML PIPELINE
 ================================================
@@ -80,3 +82,11 @@ UNSUPERVISED LEARNING - KMEANS
 Clustering completed!
 
 Exporting dashboard CSV files...
+Dashboard files exported!
+
+================================================
+PIPELINE COMPLETED SUCCESSFULLY!
+=== OUTPUTS WRITTEN TO outputs/ DIRECTORY ===
+================================================
+
+[Done] exited with code=0 in 3227.358 seconds
